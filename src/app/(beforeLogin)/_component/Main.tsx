@@ -1,14 +1,12 @@
-// import styles from "./page.module.css"; //css module을 사용
-import styles from "../page.module.css"
-import Link from "next/link";
+import styles from "@/app/(beforeLogin)/_component/main.module.css";
 import Image from "next/image";
-import zLogo from "../../../public/zlogo.png";
-
-export default function Home() {
+import zLogo from "../../../../public/zlogo.png";
+import Link from "next/link";
+export default function Main() {
   return (
     <>
       <div className={styles.left}>
-        <Image src={zLogo} alt="logo"/>
+        <Image src={zLogo} alt="logo" />
       </div>
       <div className={styles.right}>
         <h1>지금 일어나고 있는 일</h1>
@@ -18,5 +16,5 @@ export default function Home() {
         <Link href="/login" className={styles.login}>로그인</Link>
       </div>
     </>
-  );
+  )
 }
