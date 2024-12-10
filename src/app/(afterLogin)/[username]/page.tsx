@@ -3,7 +3,7 @@
 export default function Home() {
   return (
       <main>
-        로그인 이후
+        프로필 페이지
       </main>
   );
 }
