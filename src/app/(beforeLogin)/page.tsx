@@ -1,7 +1,8 @@
-import styles from "./page.module.css"; //css module을 사용
+// import styles from "./page.module.css"; //css module을 사용
+import styles from "../page.module.css"
 import Link from "next/link";
 import Image from "next/image";
-import zLogo from "../../public/zlogo.png";
+import zLogo from "../../../public/zlogo.png";
 
 export default function Home() {
   return (
