@@ -1,7 +1,7 @@
 // "use client" 라인을 이용하면 서버 컴포넌트에서 클라이언트 컴포넌트로 바꿀 수 있다.
 "use client";
 
-import style from '@/app/(beforeLogin)/@modal/login.module.css';
+import style from '@/app/(beforeLogin)/@modal/i/flow/login/login.module.css';
 import {useState} from "react";
 
 export default function LoginModal() {
