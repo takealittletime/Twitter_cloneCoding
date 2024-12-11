@@ -26,8 +26,13 @@
 @media (prefers-color-scheme: dark) {
   .postForm {
       /* border-color: rgb(47, 51, 54); */
+      /* white-space: pre-line; */
   }
 }
+.content {
+  white-space: pre-line;
+}
+
 .postInputSection {
   flex: 1;
 }

@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from '@app/page.module.css';
+import { MSWProvider } from "./_component/MSWComponent";
+
+if (process.env.NEXT_RUNTIME === 'nodejs' && process.env.NODE_ENV !== 'production') {
+  const { server } = require('@/mocks/http')
+  server.listen()
+}
 
 const inter = Inter({subsets:['latin']})
 
@@ -20,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <MSWProvider>
           {children}
+        </MSWProvider>
       </body>
     </html>
   );

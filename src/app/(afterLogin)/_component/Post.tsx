@@ -22,7 +22,7 @@ export default function Post({ noImage }: Props) {
       nickname: 'Elon Musk',
       image: '/yRsRRjGO.jpg',
     },
-    content: '테스트 코드000',
+    content: '테스트 코드!@#$%^&*()_+\n집 가고 싶다',
     createdAt: new Date(),
     Images: [] as any[],
   }
@@ -56,7 +56,7 @@ export default function Post({ noImage }: Props) {
             </Link>
             <span className={style.postDate}>{dayjs(target.createdAt).fromNow(true)}</span>
           </div>
-          <div>{target.content}</div>
+          <div className='content'>{target.content}</div>
           <div>
             <PostImages post={target} />
           </div>
