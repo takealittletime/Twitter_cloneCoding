@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from '@app/page.module.css';
 import { MSWProvider } from "./_component/MSWComponent";
+import AuthSession from "@/app/(beforeLogin)/_component/AuthSession";
 
 if (process.env.NEXT_RUNTIME === 'nodejs' && process.env.NODE_ENV !== 'production') {
   const { server } = require('@/mocks/http')
@@ -27,7 +28,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <MSWProvider>
-          {children}
+          <AuthSession>
+            {children}
+          </AuthSession>
         </MSWProvider>
       </body>
     </html>
